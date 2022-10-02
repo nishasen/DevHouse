@@ -1,8 +1,9 @@
 import styles from '../styles/components/SignUp.module.css';
-
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useSignUpEmailPassword } from '@nhost/react';
+import { Link, Navigate } from 'react-router-dom';
 import Input from './Input';
+import Spinner from './Spinner';
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState('');
@@ -14,9 +15,31 @@ const SignUp = () => {
   const [designation, setDesignation] = useState('');
   const [bio, setBio] = useState('');
 
-  const handleOnSubmit = async (e) => {
-    e.preventDefault();
-  };
+  const { signUpEmailPassword, isLoading, isSuccess, needsEmailVerification, isError, error } =
+  useSignUpEmailPassword()
+
+const handleOnSubmit = (e) => {
+  e.preventDefault()
+  console.log(e)
+
+  signUpEmailPassword(email, password, {
+    displayName: `${firstName} ${lastName}`.trim(),
+    metadata:{
+      username,
+      firstName,
+      lastName,
+      bio
+    }
+  })
+};
+
+if (isSuccess) {
+  return <Navigate to="/" replace={true} />
+}
+
+const disableForm = isLoading || needsEmailVerification
+
+
 
   return (
     <div className={styles.container}>
@@ -24,7 +47,11 @@ const SignUp = () => {
         <div className={styles['logo-wrapper']}>
           <img src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
         </div>
-
+        {needsEmailVerification ? (
+          <p className={styles['verification-text']}>
+            Please check your mailbox and follow the verification link to verify your email.
+          </p>
+        ) : (
         <form onSubmit={handleOnSubmit} className={styles.form}>
           <div className={styles['input-group']}>
             <Input
@@ -79,10 +106,13 @@ const SignUp = () => {
             required
           />
 
-          <button type="submit" className={styles.button}>
-            Create account
+          <button type="submit" disabled={disableForm} className={styles.button}>
+              {isLoading ? <Spinner size="sm" /> : 'Create account'}
           </button>
+
+          {isError ? <p className={styles['error-text']}>{error?.message}</p> : null}
         </form>
+        )}
       </div>
 
       <p className={styles.text}>
