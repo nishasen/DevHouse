@@ -4,6 +4,8 @@ import { useSignUpEmailPassword } from '@nhost/react';
 import { Link, Navigate } from 'react-router-dom';
 import Input from './Input';
 import Spinner from './Spinner';
+import Header from './Header';
+import { Avatars } from '../Constants/Constants';
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState('');
@@ -45,7 +47,7 @@ const disableForm = isLoading || needsEmailVerification
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles['logo-wrapper']}>
-          <img src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
+          <Header fontsize={'3rem'}/>
         </div>
         {needsEmailVerification ? (
           <p className={styles['verification-text']}>
@@ -53,6 +55,11 @@ const disableForm = isLoading || needsEmailVerification
           </p>
         ) : (
         <form onSubmit={handleOnSubmit} className={styles.form}>
+          <div className={styles['avatar-box']}>
+            {Avatars.map(({avatarId, avatarName}) => <div key={avatarId} className={styles['avatar-wrapper']}>
+              <img src={avatarName} className={styles['avatar-img']}/>
+            </div> )}
+          </div>
           <div className={styles['input-group']}>
             <Input
               label="First name"

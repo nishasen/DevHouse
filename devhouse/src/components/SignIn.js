@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import Input from './Input';
 import Spinner from './Spinner';
+import Header from './Header';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -32,7 +33,7 @@ const SignIn = () => {
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles['logo-wrapper']}>
-          <img src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
+          <Header fontsize={'3rem'}/>
         </div>
         {needsEmailVerification ? (
           <p className={styles['verification-text']}>

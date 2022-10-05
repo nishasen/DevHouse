@@ -13,19 +13,9 @@ const Dashboard = () => {
       </Helmet>
 
       <div>
-        <h2 className={styles.title}>Dashboard</h2>
-
-        <p className={styles['welcome-text']}>
-          Welcome, {user?.metadata?.firstName || 'stranger'}{' '}
-          <span role="img" alt="hello">
-            👋
-          </span>
-        </p>
-
-        <p className={styles['info-text']}>
-          Edit the <code>src/pages/Dashboard.js</code> file to populate this
-          page.
-        </p>
+        <div className={styles['dashboard-card']}>
+          
+        </div>
       </div>
     </>
   );

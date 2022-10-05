@@ -1,5 +1,12 @@
 .container {
-  width: 100%;
+  display: grid;
+  max-width: 100%;
+  min-height: 100vh;
+  grid-template-rows: 4rem auto;
+  grid-template-columns: repeat(1, auto);
+  grid-template-areas: 
+            "header"
+            "main";
 }
 @media (min-width: 640px) {
   .container {
@@ -23,26 +30,20 @@
 }
 
 .header {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 60px;
-  background-color: rgb(255, 255, 255);
+  grid-area: header;
+  background-color: var(--bg-color);
   box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgb(0 0 0 / 0.1),
     0 1px 2px -1px rgb(0 0 0 / 0.1);
   z-index: 10;
 }
 
 .header-container {
-  composes: container;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -186,15 +187,10 @@
 }
 
 .main {
-  margin-top: 60px;
+  grid-area: main;
+  background-color: var(--bg-color);
 }
 
 .main-container {
-  composes: container;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 1rem 2rem;
 }
