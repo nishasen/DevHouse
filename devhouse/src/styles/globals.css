@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Nunito&display=swap');
+
 * {
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
   border-color: rgb(243, 244, 246);
+}
+
+:root {
+    --primary: #1976D2;
+    --primary-hover: #1565C0;
+    --bg-color: #071e3d;
+    --grey: #656972;
+    --light-grey: #D4D5D9;
+    --bg-modal: #C9DDF8;
+    --black: #010C13;
+    --white: #FCFCFC;
+    --body-font: 'Nunito', sans-serif;
 }
 
 html,
@@ -52,4 +66,9 @@ button {
   cursor: pointer;
   background-color: transparent;
   background-image: none;
+}
+
+.body-background {
+  background-color: var(--bg-color);
+  z-index: -1;
 }

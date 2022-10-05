@@ -11,6 +11,8 @@ import {
   UserIcon,
 } from '@heroicons/react/outline';
 import Avatar from './Avatar';
+import Header from './Header';
+import Avatar1 from '../Avatars/avatar1.png';
 
 const Layout = () => {
   const user = useUserData();
@@ -34,16 +36,16 @@ const Layout = () => {
   ];
 
   return (
-    <div>
+    <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles['header-container']}>
           <Link to="/">
-            <img src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
+            <Header fontsize={'2.5rem'}/>
           </Link>
 
           <Menu as="div" className={styles.menu}>
             <Menu.Button className={styles['menu-button']}>
-              <Avatar src={user?.avatarUrl} alt={user?.displayName} />
+              <Avatar src={Avatar1} alt={user?.displayName} />
               <ChevronDownIcon />
             </Menu.Button>
             <Transition
