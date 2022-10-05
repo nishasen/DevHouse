@@ -1,4 +1,5 @@
 import styles from '../styles/components/Layout.module.css';
+import { useSignOut, useUserData } from '@nhost/react';
 
 import { Fragment } from 'react';
 import { Outlet, Link } from 'react-router-dom';
@@ -12,8 +13,8 @@ import {
 import Avatar from './Avatar';
 
 const Layout = () => {
-  const user = null;
-
+  const user = useUserData();
+  const { signOut } = useSignOut()
   const menuItems = [
     {
       label: 'Dashboard',
@@ -27,7 +28,7 @@ const Layout = () => {
     },
     {
       label: 'Logout',
-      onClick: () => null,
+      onClick: signOut,
       icon: LogoutIcon,
     },
   ];
