@@ -1,7 +1,4 @@
-.dashboard-card {
-  width: 30rem;
-  height: 15rem;
-  background-color: var(--white);
-  border-radius: 0.5rem;
-  overflow-y: auto;
+.dashboard-layout {
+    display: flex;
+    gap: 2rem
 }
