@@ -1,0 +1,17 @@
+.primary-button {
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--white);
+}
+
+.secondary-button {
+    color: var(--white);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--white);
+}
+
+.primary-button:hover, .secondary-button:hover {
+    background-color: var(--primary-hover);
+}

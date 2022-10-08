@@ -1,0 +1,8 @@
+.trending-card {
+    width: 20rem;
+    height: 30rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}

@@ -13,6 +13,7 @@ import {
 import Avatar from './Avatar';
 import Header from './Header';
 import Avatar1 from '../Avatars/avatar1.png';
+import Button from './Button';
 
 const Layout = () => {
   const user = useUserData();
@@ -44,9 +45,10 @@ const Layout = () => {
           </Link>
 
           <Menu as="div" className={styles.menu}>
+            <Button text="Schedule an event" primary={true} />
+            <Button text="Create room" primary={false} />
             <Menu.Button className={styles['menu-button']}>
               <Avatar src={Avatar1} alt={user?.displayName} />
-              <ChevronDownIcon />
             </Menu.Button>
             <Transition
               as={Fragment}

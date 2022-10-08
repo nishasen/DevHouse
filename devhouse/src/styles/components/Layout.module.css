@@ -55,12 +55,15 @@
 .menu {
   position: relative;
   z-index: 50;
+  display: flex;
+  gap: 0.75rem;
 }
 
 .menu-button {
   display: flex;
   align-items: center;
 }
+
 .menu-button > svg {
   margin-right: 1px;
   width: 1.25rem;
