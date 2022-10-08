@@ -5,4 +5,43 @@
     border-radius: 0.5rem;
     padding: 0.5rem;
     font-size: 1.5rem;
+    overflow-y: auto;
+}
+
+.header {
+    color: var(--primary);
+}
+
+.icon-size {
+    width: 1.5rem;
+    color: var(--bg-color)
+}
+
+.event-header {
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.event-desc {
+    font-size: 1rem;
+}
+
+.event-date {
+    font-size: 0.8rem;
+    color: var(--grey);
+    align-self: flex-start;
+    margin: 9px 1rem 0 0 ;
+}
+
+.event-host {
+    margin-top: -0.8rem;
+    font-size: 1.1rem;
+}
+
+.host-header {
+    font-weight: 600;
+    color: var(--red);
 }

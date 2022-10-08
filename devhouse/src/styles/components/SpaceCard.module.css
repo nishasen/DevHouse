@@ -12,6 +12,10 @@
     font-size: 1.5rem;
 }
 
+.header {
+    color: var(--primary);
+}
+
 .avatar-box {
     display: flex;
     flex-wrap: wrap;
@@ -28,9 +32,9 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    border: 1px solid var(--primary);
+    border: 1.2px solid var(--primary);
 }
 
 .space-avatars:hover {
-    border: 2px solid var(--primary);
+    border: 2.5px solid var(--primary);
 }

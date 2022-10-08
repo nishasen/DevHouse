@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import SpaceCard from '../components/SpaceCard';
 import TrendingNewsCard from '../components/TrendingNewsCard';
 import EventCard from '../components/EventCard';
+import DevInfo from '../components/DevInfo';
 
 const Dashboard = () => {
   const { user } = useOutletContext();
@@ -16,7 +17,10 @@ const Dashboard = () => {
       </Helmet>
 
       <div className={styles['dashboard-layout']}>
-        <SpaceCard />
+        <div className={styles['column-layout']}>
+          <SpaceCard />
+          <DevInfo />
+        </div>
         <TrendingNewsCard />
         <EventCard />
       </div>
