@@ -16,6 +16,9 @@
     --bg-modal: #C9DDF8;
     --black: #010C13;
     --white: #FCFCFC;
+    --red: #A02C3D;
+    --scroll-background: rgb(192, 183, 183);
+    --scroll-track-color: hsl(288, 6%, 33%);
     --body-font: 'Nunito', sans-serif;
 }
 

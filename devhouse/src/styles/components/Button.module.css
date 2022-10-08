@@ -2,14 +2,18 @@
     background-color: var(--primary);
     border-radius: 0.5rem;
     padding: 0.5rem;
+    font-size: 0.9rem;
     border: 1px solid var(--white);
+    color: var(--white);
 }
 
 .secondary-button {
     color: var(--white);
     border-radius: 0.5rem;
     padding: 0.5rem;
+    font-size: 0.9rem;
     border: 1px solid var(--white);
+    background-color: var(--bg-color);
 }
 
 .primary-button:hover, .secondary-button:hover {

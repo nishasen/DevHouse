@@ -5,14 +5,13 @@ import { Fragment } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { Menu, Transition } from '@headlessui/react';
 import {
-  ChevronDownIcon,
   HomeIcon,
   LogoutIcon,
   UserIcon,
 } from '@heroicons/react/outline';
 import Avatar from './Avatar';
 import Header from './Header';
-import Avatar1 from '../Avatars/avatar1.png';
+import Avatar1 from '../Assets/Avatars/avatar1.png';
 import Button from './Button';
 
 const Layout = () => {
