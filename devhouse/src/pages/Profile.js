@@ -26,6 +26,7 @@ const Profile = () => {
       </Helmet>
 
       <div className={styles.container}>
+        
         <div className={styles.info}>
           <h2>Profile</h2>
           <p>Update your personal information.</p>

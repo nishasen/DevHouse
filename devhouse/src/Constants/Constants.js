@@ -30,43 +30,83 @@ export const Avatars = [
     },
     {
         avatarId: 3,
-        avatarImg: Avatar3
+        avatarImg: Avatar3,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
     {
         avatarId: 4,
-        avatarImg: Avatar4
+        avatarImg: Avatar4,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
     {
         avatarId: 5,
-        avatarImg: Avatar5
+        avatarImg: Avatar5,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
     {
         avatarId: 6,
-        avatarImg: Avatar6
+        avatarImg: Avatar6,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
     {
         avatarId: 7,
-        avatarImg: Avatar7
+        avatarImg: Avatar7,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
     {
         avatarId: 8,
-        avatarImg: Avatar8
+        avatarImg: Avatar8,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
     {
         avatarId: 9,
-        avatarImg: Avatar9
+        avatarImg: Avatar9,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
     {
         avatarId: 10,
-        avatarImg: Avatar10
+        avatarImg: Avatar10,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
     {
         avatarId: 11,
-        avatarImg: Avatar11
+        avatarImg: Avatar11,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
     {
         avatarId: 12,
-        avatarImg: Avatar12
+        avatarImg: Avatar12,
+        username: "Poko",
+        email: "nisha@gmail.com",
+        designation: "Frontend Developer",
+        bio: "Creating my own sunshine."
     },
 ]
 
