@@ -75,3 +75,13 @@ button {
   background-color: var(--bg-color);
   z-index: -1;
 }
+
+.profile {
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+
+.profile-md-round {
+  width: 3rem;
+  height: 3rem;
+}

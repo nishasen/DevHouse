@@ -56,8 +56,8 @@ const disableForm = isLoading || needsEmailVerification
         ) : (
         <form onSubmit={handleOnSubmit} className={styles.form}>
           <div className={styles['avatar-box']}>
-            {Avatars.map(({avatarId, avatarName}) => <div key={avatarId} className={styles['avatar-wrapper']}>
-              <img src={avatarName} className={styles['avatar-img']}/>
+            {Avatars.map(({avatarId, avatarImg}) => <div key={avatarId} className={styles['avatar-wrapper']}>
+              <img src={avatarImg} className={styles['avatar-img']}/>
             </div> )}
           </div>
           <div className={styles['input-group']}>

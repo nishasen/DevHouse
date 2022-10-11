@@ -9,10 +9,16 @@ import {
   LogoutIcon,
   UserIcon,
 } from '@heroicons/react/outline';
+import IconButton from '@mui/material/IconButton';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import CreateIcon from '@mui/icons-material/Create';
 import Avatar from './Avatar';
 import Header from './Header';
 import Avatar1 from '../Assets/Avatars/avatar1.png';
 import Button from './Button';
+import SideNavigation from './SideNavigation';
+import UsersList from './UsersList';
+import BottomNavigation from './BottomNavigation';
 
 const Layout = () => {
   const user = useUserData();
@@ -44,8 +50,18 @@ const Layout = () => {
           </Link>
 
           <Menu as="div" className={styles.menu}>
-            <Button text="Schedule an event" primary={true} />
-            <Button text="Create room" primary={false} />
+            <div className={styles['header-buttons']}>
+              <Button text="Schedule an event" primary={true} />
+              <Button text="Create room" primary={false} />
+            </div>
+            <div className={styles['icon-buttons']}>
+              <IconButton color="primary">
+                <CalendarMonthIcon />
+              </IconButton>
+              <IconButton color="primary">
+                <CreateIcon />
+              </IconButton>
+            </div>
             <Menu.Button className={styles['menu-button']}>
               <Avatar src={Avatar1} alt={user?.displayName} />
             </Menu.Button>
@@ -92,11 +108,18 @@ const Layout = () => {
         </div>
       </header>
 
+      <aside className={styles['left-aside']}>
+          <SideNavigation />
+          <BottomNavigation />
+      </aside>
       <main className={styles.main}>
         <div className={styles['main-container']}>
           <Outlet context={{ user }} />
         </div>
       </main>
+      <aside className={styles['right-aside']}>
+          <UsersList />
+      </aside>
     </div>
   );
 };
