@@ -1,6 +1,6 @@
 import styles from '../styles/components/Layout.module.css';
 import { useSignOut, useUserData } from '@nhost/react';
-
+import Button from '@mui/material/Button';
 import { Fragment } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { Menu, Transition } from '@headlessui/react';
@@ -15,7 +15,6 @@ import CreateIcon from '@mui/icons-material/Create';
 import Avatar from './Avatar';
 import Header from './Header';
 import Avatar1 from '../Assets/Avatars/avatar1.png';
-import Button from './Button';
 import SideNavigation from './SideNavigation';
 import UsersList from './UsersList';
 import BottomNavigation from './BottomNavigation';
@@ -51,8 +50,8 @@ const Layout = () => {
 
           <Menu as="div" className={styles.menu}>
             <div className={styles['header-buttons']}>
-              <Button text="Schedule an event" primary={true} />
-              <Button text="Create room" primary={false} />
+              <Button size="small" variant="contained">Schedule an event</Button>
+              <Button size="small" variant="outlined">Create Room</Button>
             </div>
             <div className={styles['icon-buttons']}>
               <IconButton color="primary">

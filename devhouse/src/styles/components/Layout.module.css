@@ -3,7 +3,7 @@
   max-width: 100%;
   min-height: 100vh;
   background-color: var(--bg-color);
-  grid-template-rows: 4rem auto;
+  grid-template-rows: 3.5rem auto;
   grid-template-columns: 13rem auto 20rem;
   grid-template-areas: 
             "header header header"
@@ -11,6 +11,8 @@
 }
 
 .header {
+  position: fixed;
+  width: 100%;
   grid-area: header;
   background-color: var(--bg-color);
   box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgb(0 0 0 / 0.1),

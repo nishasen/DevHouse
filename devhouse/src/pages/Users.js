@@ -3,7 +3,7 @@ import PageHeader from '../components/PageHeader'
 
 function Users() {
   return (
-    <div><PageHeader header="Bookmark" /></div>
+    <div><PageHeader header="Users" /></div>
   )
 }
 

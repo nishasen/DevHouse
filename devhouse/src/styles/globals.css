@@ -85,3 +85,7 @@ button {
   width: 3rem;
   height: 3rem;
 }
+
+.css-13xfq8m-MuiTabPanel-root {
+  padding: 1rem 0rem !important;
+}

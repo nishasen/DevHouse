@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
-    padding-top: 2rem;
+    padding: 2rem 0 0 1rem;
     align-items: flex-start;
 }
 

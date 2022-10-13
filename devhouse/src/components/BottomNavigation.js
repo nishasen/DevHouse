@@ -7,33 +7,35 @@ import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
 import PeopleAltRoundedIcon from '@mui/icons-material/PeopleAltRounded';
 import IconButton from '@mui/material/IconButton';
+import { NavLink } from 'react-router-dom';
 import styles from '../styles/components/BottomNavigation.module.css';
+import { Stack } from '@mui/material';
 
 function BottomNavigation() {
   return (
-    <div className={styles["bottom-navigation"]}>
-        <IconButton color="primary" aria-label="events">
+    <Stack direction="row" className={styles["bottom-navigation"]}>
+        <IconButton component={NavLink} to="/events" color="primary" aria-label="events">
             <CalendarMonthRoundedIcon />
         </IconButton>
-        <IconButton color="primary" aria-label="explore">
+        <IconButton component={NavLink} to="/explore" color="primary" aria-label="explore">
             <ExploreRoundedIcon />
         </IconButton>
-        <IconButton color="primary" aria-label="notification">
+        <IconButton component={NavLink} to="/notification" color="primary" aria-label="notification">
             <NotificationsRoundedIcon />
         </IconButton>
-        <IconButton color="primary" aria-label="bookmark">
+        <IconButton component={NavLink} to="/bookmark" color="primary" aria-label="bookmark">
             <BookmarkRoundedIcon />
         </IconButton>
-        <IconButton color="primary" aria-label="profile">
+        <IconButton component={NavLink} to="/profile" color="primary" aria-label="profile">
             <PersonRoundedIcon />
         </IconButton>
-        <IconButton color="primary" aria-label="rooms">
+        <IconButton component={NavLink} to="/rooms" color="primary" aria-label="rooms">
             <HomeRoundedIcon />
         </IconButton>
-        <IconButton color="primary" aria-label="users">
+        <IconButton component={NavLink} to="/users" color="primary" aria-label="users">
             <PeopleAltRoundedIcon />
         </IconButton>
-    </div>
+    </Stack>
     
   )
 }
