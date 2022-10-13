@@ -9,11 +9,10 @@ import PeopleAltRoundedIcon from '@mui/icons-material/PeopleAltRounded';
 import IconButton from '@mui/material/IconButton';
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/components/BottomNavigation.module.css';
-import { Stack } from '@mui/material';
 
 function BottomNavigation() {
   return (
-    <Stack direction="row" className={styles["bottom-navigation"]}>
+    <div className={styles["bottom-navigation"]}>
         <IconButton component={NavLink} to="/events" color="primary" aria-label="events">
             <CalendarMonthRoundedIcon />
         </IconButton>
@@ -35,7 +34,7 @@ function BottomNavigation() {
         <IconButton component={NavLink} to="/users" color="primary" aria-label="users">
             <PeopleAltRoundedIcon />
         </IconButton>
-    </Stack>
+    </div>
     
   )
 }
