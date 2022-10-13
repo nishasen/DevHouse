@@ -1,22 +1,47 @@
 .trending-card {
-    width: 20rem;
-    height: 30rem;
-    background-color: var(--white);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .header {
+    margin-top: 0.5rem;
     color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: sticky;
+    padding: 0.5rem 0;
+    top: 6rem;
+    background-color: var(--bg-color);
+}
+
+.news-box {
+    border-radius: 0.5rem;
+    border: 1.5px solid var(--grey);
+    padding: 0.5rem
 }
 
 .news-header {
-    font-size: 1.3rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.1rem;
     font-weight: 600;
+    color: var(--white);
+}
+
+.header-span {
+    color: var(--primary);
+    font-size: 1.5rem;
 }
 
 .news-desc {
     font-size: 1rem;
+    color: var(--light-grey);
+    margin: 0 0 1rem 1.5rem;
+}
+
+.read-more {
+    margin-left: 1.5rem;
+    width: max-content;
 }

@@ -1,17 +1,22 @@
 import React from 'react';
 import styles from '../styles/components/TrendingNewsCard.module.css';
 import { TrendingNews } from '../Constants/Constants';
-import Button from './Button';
+import { Button } from '@mui/material';
 function TrendingNewsCard() {
   return (
-    <div className={styles['trending-card']}>
+    <div>
         <h2 className={styles['header']}>Trending news</h2>
-        <div>
+        <div className={styles['trending-card']}>
           {TrendingNews.map(({newsId, newsHeader, newsDescription})=> 
-          <div key={newsId}>
-            <h3 className={styles['news-header']}>#{newsHeader}</h3>
+          <div key={newsId} className={styles['news-box']}>
+            <h3 className={styles['news-header']}>
+              <span className={styles['header-span']}>#</span>
+              {newsHeader}
+            </h3>
             <p className={styles['news-desc']}>{newsDescription}</p>
-            <Button text={"Schedule event"} primary={true} />
+            <div className={styles['read-more']}>
+              <Button variant='outlined' color="warning" size="small">Read more</Button>
+            </div>
           </div>)}
         </div>
     </div>
