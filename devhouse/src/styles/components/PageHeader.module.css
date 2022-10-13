@@ -1,4 +1,9 @@
 .page-header {
     color: var(--white);
     font-size: 2rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 3.5rem;
+    z-index: 10;
 }

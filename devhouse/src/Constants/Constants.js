@@ -149,5 +149,26 @@ export const UpcomingEvents = [
         eventHeader: "Topic 3",
         eventHost: "Abhilash Nair",
         eventDescription: "I have many friends who speak fluently, but still don't sound like native speakers. I have many friends who speak fluently, but still don't sound like native speakers."
+    },
+    {
+        eventId: 4,
+        eventDate: "12-10-2022",
+        eventHeader: "Topic 1",
+        eventHost: "Abhilash Nair",
+        eventDescription: "I have many friends who speak fluently, but still don't sound like native speakers."
+    }, 
+    {
+        eventId: 5,
+        eventDate: "12-10-2022",
+        eventHeader: "Topic 2",
+        eventHost: "Abhilash Nair",
+        eventDescription: "I have many friends who speak fluently, but still don't sound like native speakers."
+    },
+    {
+        eventId: 6,
+        eventDate: "12-10-2022",
+        eventHeader: "Topic 3",
+        eventHost: "Abhilash Nair",
+        eventDescription: "I have many friends who speak fluently, but still don't sound like native speakers. I have many friends who speak fluently, but still don't sound like native speakers."
     }
 ]
