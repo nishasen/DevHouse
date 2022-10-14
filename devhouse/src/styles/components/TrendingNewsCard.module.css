@@ -6,9 +6,9 @@
 
 .header {
     margin-top: 0.5rem;
-    color: var(--primary);
+    color: var(--primary-hover);
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 500;
     position: sticky;
     padding: 0.5rem 0;
     top: 6rem;
