@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useOutletContext } from 'react-router-dom';
 import Input from '../components/Input';
+import PageHeader from '../components/PageHeader';
+import { Avatars } from '../Constants/Constants';
 
 const Profile = () => {
   const { user } = useOutletContext();
@@ -19,22 +21,33 @@ const Profile = () => {
     e.preventDefault();
   };
 
+  const selectedAvatarId = 1;
+
   return (
     <>
       <Helmet>
-        <title>Profile - Nhost</title>
+        <title>Profile - DevHouse</title>
       </Helmet>
 
-      <div className={styles.container}>
-        
+      <div>
+        <PageHeader header="Profile" />
         <div className={styles.info}>
-          <h2>Profile</h2>
           <p>Update your personal information.</p>
         </div>
 
         <div className={styles.card}>
           <form onSubmit={updateUserProfile} className={styles.form}>
             <div className={styles['form-fields']}>
+              <div className={styles['form-avatars']}>
+                <div className={styles.label}>
+                  <p>Avatar</p>
+                </div>
+                <div className={styles['avatar-box']}>
+                  {Avatars.map(({avatarId, avatarImg})=> <div key={avatarId} className={styles['avatar-wrapper']}>
+                    <img src={avatarImg} alt="Avatar" className={`${"profile profile-md-round"} ${selectedAvatarId===avatarId ? styles["selected-avatar"] : styles["avatar-image"]} `}/>
+                  </div>)}
+                </div>
+              </div>
               <div className={styles['input-group']}>
                 <Input
                   type="text"
@@ -51,6 +64,16 @@ const Profile = () => {
                   required
                 />
               </div>
+              <Input
+                  type="text"
+                  label="Designation"
+                  value={user?.designation}
+                />
+              <Input
+                  type="text"
+                  label="Bio"
+                  value={user?.bio}
+                />
               <div className={styles['input-email-wrapper']}>
                 <Input
                   type="email"

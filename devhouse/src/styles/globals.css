@@ -77,6 +77,7 @@ button {
 }
 
 .profile {
+  cursor: pointer;
   border-radius: 50%;
   border: 2px solid var(--primary);
 }
@@ -89,4 +90,3 @@ button {
 .css-13xfq8m-MuiTabPanel-root {
   padding: 0px !important;
 }
-
